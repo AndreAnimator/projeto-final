@@ -1,0 +1,1 @@
+1, "Teste de cena", 1, "Eu" , 1, 0
