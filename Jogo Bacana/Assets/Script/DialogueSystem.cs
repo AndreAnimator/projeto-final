@@ -1,3 +1,4 @@
+/******************************************************************************
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -108,3 +109,4 @@ public class DialogueSystem : MonoBehaviour
 	public TextMeshProUGUI speakerNameText {get{return elements.speakerNameText;}}
 	public TextMeshProUGUI speechText {get{return elements.speechText;}}
 }
+*******************************************************************************/
