@@ -461,6 +461,127 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366886766}
   m_CullTransparentMesh: 1
+--- !u!1 &461188000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461188001}
+  - component: {fileID: 461188004}
+  - component: {fileID: 461188003}
+  - component: {fileID: 461188002}
+  m_Layer: 5
+  m_Name: FROG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &461188001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461188000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1363260756}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -259, y: 11}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &461188002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461188000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3660e415c7fe3af498dab7afef3ced5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: Sapo
+    sentences:
+    - "Abacaxi, \xE9?"
+    - Eu gosto de abacaxi! HAHAHA
+  dialogue1:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: 
+    sentences: []
+  dialogue2:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: 
+    sentences: []
+--- !u!114 &461188003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461188000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &461188004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461188000}
+  m_CullTransparentMesh: 1
 --- !u!1 &509321769
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,10 +636,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Euu
+    dialogue1: {fileID: 461188000}
+    dialogue2: {fileID: 1452396339}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 2
+    name: Sapo
     sentences:
-    - Muito legal
-    - Muito bacana
+    - Harr Harr Harr
+    - Ribbit
+    - Ribbit
+    - "Eu sou um sapo. Do que voc\xEA gosta?\n1. Abacaxi\n2. Coco"
+  dialogue1:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: 
+    sentences: []
+  dialogue2:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: 
+    sentences: []
 --- !u!114 &509321772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +841,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.54, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -886,7 +1036,7 @@ GameObject:
   - component: {fileID: 1363260753}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Personagem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,6 +1117,8 @@ RectTransform:
   - {fileID: 528859856}
   - {fileID: 1127355597}
   - {fileID: 509321770}
+  - {fileID: 461188001}
+  - {fileID: 1452396340}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -975,6 +1127,127 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1452396339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1452396340}
+  - component: {fileID: 1452396343}
+  - component: {fileID: 1452396342}
+  - component: {fileID: 1452396341}
+  m_Layer: 5
+  m_Name: FOX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1452396340
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452396339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -4, y: 4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1363260756}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 289, y: 73}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1452396341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452396339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3660e415c7fe3af498dab7afef3ced5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: Raposa
+    sentences:
+    - "Voc\xEA gosta de coco?"
+    - "Eu acho que voc\xEA gosta \xE9 de coc\xF4, isso sim"
+  dialogue1:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: 
+    sentences: []
+  dialogue2:
+    dialogue1: {fileID: 0}
+    dialogue2: {fileID: 0}
+    cena: 0
+    humor: 0
+    voz: 0
+    som: 0
+    numEscolhas: 0
+    name: 
+    sentences: []
+--- !u!114 &1452396342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452396339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 448d57c5e4c694686badaba281a6adff, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1452396343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452396339}
+  m_CullTransparentMesh: 1
 --- !u!1 &1511040990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 37}
   m_SizeDelta: {x: -60, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511040992

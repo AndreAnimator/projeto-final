@@ -5,6 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
+    public GameObject dialogue1;//tem q resolver isso ae
+    public GameObject dialogue2;//isso msm arranjar uma forma de referenciar a própria classe
+    public int cena;
+    public int humor;
+    public int voz;
+    public int som;
+    public int numEscolhas;
+    //adicionei os negocio a mais
     public string name;
 
     [TextArea(3, 10)]
