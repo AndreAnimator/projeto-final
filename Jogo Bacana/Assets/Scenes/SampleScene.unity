@@ -149,7 +149,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297564688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -324,7 +324,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366886766
 GameObject:
@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 461188004}
   - component: {fileID: 461188003}
   - component: {fileID: 461188002}
+  - component: {fileID: 461188005}
   m_Layer: 5
   m_Name: FROG
   m_TagString: Untagged
@@ -487,13 +488,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461188000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1363260756}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -515,34 +516,47 @@ MonoBehaviour:
   dialogue:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
-    cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    personagem1: {fileID: 461188005}
+    personagem2: {fileID: 1452396344}
+    cena: 2
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: Sapo
+    name:
+    - Sapo
+    - Sapo
+    - Fox
     sentences:
     - "Abacaxi, \xE9?"
     - Eu gosto de abacaxi! HAHAHA
+    - Cringe.
   dialogue1:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
+    personagem1: {fileID: 0}
+    personagem2: {fileID: 0}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: 
+    name: []
     sentences: []
   dialogue2:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
+    personagem1: {fileID: 0}
+    personagem2: {fileID: 0}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: 
+    name: []
     sentences: []
 --- !u!114 &461188003
 MonoBehaviour:
@@ -582,6 +596,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461188000}
   m_CullTransparentMesh: 1
+--- !u!95 &461188005
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461188000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 739cb87ea1978a345935aa49644afeb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &509321769
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +650,7 @@ RectTransform:
   m_Children:
   - {fileID: 366886767}
   m_Father: {fileID: 1363260756}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -638,36 +672,49 @@ MonoBehaviour:
   dialogue:
     dialogue1: {fileID: 461188000}
     dialogue2: {fileID: 1452396339}
+    personagem1: {fileID: 461188005}
+    personagem2: {fileID: 1452396344}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 2
-    name: Sapo
+    name:
+    - Sapo
+    - Sapo
+    - Fox
+    - Sapo
     sentences:
     - Harr Harr Harr
     - Ribbit
-    - Ribbit
+    - Aur
     - "Eu sou um sapo. Do que voc\xEA gosta?\n1. Abacaxi\n2. Coco"
   dialogue1:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
+    personagem1: {fileID: 0}
+    personagem2: {fileID: 0}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: 
+    name: []
     sentences: []
   dialogue2:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
+    personagem1: {fileID: 0}
+    personagem2: {fileID: 0}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: 
+    name: []
     sentences: []
 --- !u!114 &509321772
 MonoBehaviour:
@@ -923,6 +970,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528859855}
   m_CullTransparentMesh: 1
+--- !u!1 &914375166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 914375167}
+  - component: {fileID: 914375170}
+  - component: {fileID: 914375169}
+  - component: {fileID: 914375168}
+  m_Layer: 5
+  m_Name: Seletor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &914375167
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914375166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1363260756}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -408.1, y: -210.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &914375168
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914375166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e24b236f270086469280f9690c3f032, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &914375169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914375166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 494b83b3e4984e246845b781e99ce4e1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &914375170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914375166}
+  m_CullTransparentMesh: 1
 --- !u!1 &1127355596
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,14 +1094,14 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127355596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1511040991}
   - {fileID: 297564689}
   m_Father: {fileID: 1363260756}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1115,12 +1259,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 528859856}
-  - {fileID: 1127355597}
-  - {fileID: 509321770}
   - {fileID: 461188001}
   - {fileID: 1452396340}
+  - {fileID: 1127355597}
+  - {fileID: 509321770}
+  - {fileID: 914375167}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1139,6 +1284,7 @@ GameObject:
   - component: {fileID: 1452396343}
   - component: {fileID: 1452396342}
   - component: {fileID: 1452396341}
+  - component: {fileID: 1452396344}
   m_Layer: 5
   m_Name: FOX
   m_TagString: Untagged
@@ -1159,11 +1305,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1363260756}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 289, y: 73}
+  m_AnchoredPosition: {x: 289, y: 74}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1452396341
@@ -1181,34 +1327,45 @@ MonoBehaviour:
   dialogue:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
-    cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    personagem1: {fileID: 1452396344}
+    personagem2: {fileID: 461188005}
+    cena: 1
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: Raposa
+    name:
+    - Fox
+    - Fox
     sentences:
     - "Voc\xEA gosta de coco?"
     - "Eu acho que voc\xEA gosta \xE9 de coc\xF4, isso sim"
   dialogue1:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
+    personagem1: {fileID: 0}
+    personagem2: {fileID: 0}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: 
+    name: []
     sentences: []
   dialogue2:
     dialogue1: {fileID: 0}
     dialogue2: {fileID: 0}
+    personagem1: {fileID: 0}
+    personagem2: {fileID: 0}
     cena: 0
-    humor: 0
-    voz: 0
-    som: 0
+    humor: 
+    voz: 
+    som: 
+    music: 
     numEscolhas: 0
-    name: 
+    name: []
     sentences: []
 --- !u!114 &1452396342
 MonoBehaviour:
@@ -1248,6 +1405,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452396339}
   m_CullTransparentMesh: 1
+--- !u!95 &1452396344
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452396339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90c153d03c457f942bf6274e4efdb890, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1511040990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1451,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511040990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1306,9 +1483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AAAA
-
-'
+  m_text: "Eu sou um sapo. Do que voc\xEA gosta?\n1. Abacaxi\n2. Coco"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1417,6 +1592,9 @@ MonoBehaviour:
   nameText: {fileID: 297564690}
   dialogueText: {fileID: 1511040992}
   animator: {fileID: 1127355600}
+  personagem1: {fileID: 0}
+  personagem2: {fileID: 0}
+  optionChoice: {fileID: 914375168}
 --- !u!4 &1612564293
 Transform:
   m_ObjectHideFlags: 0
@@ -1430,5 +1608,74 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1745233206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745233208}
+  - component: {fileID: 1745233207}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1745233207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745233206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c396b21ed2ffc74c86f9b7ba89934e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 7e72ea83df3c59746b0f7651e980ee8c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Sapo
+    clip: {fileID: 8300000, guid: 09d8f324b0e32df48a31920661bf26f1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Cima
+    clip: {fileID: 8300000, guid: 867d13b01df9f9040b33405af895b65a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Baixo
+    clip: {fileID: 8300000, guid: 33f94b9359aa00b43bd6451b1406156c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1745233208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745233206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
