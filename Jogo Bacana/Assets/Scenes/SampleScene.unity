@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 461188003}
   - component: {fileID: 461188002}
   - component: {fileID: 461188005}
+  - component: {fileID: 461188006}
   m_Layer: 5
   m_Name: FROG
   m_TagString: Untagged
@@ -519,7 +520,7 @@ MonoBehaviour:
     personagem1: {fileID: 461188005}
     personagem2: {fileID: 1452396344}
     cena: 2
-    humor: 
+    humor: 000000000100000000000000
     voz: 
     som: 
     music: 
@@ -616,6 +617,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &461188006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461188000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3732931aa565a464499ba22f6ca4247e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 461188005}
 --- !u!1 &509321769
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +689,7 @@ MonoBehaviour:
     personagem1: {fileID: 461188005}
     personagem2: {fileID: 1452396344}
     cena: 0
-    humor: 
+    humor: 00000000020000000000000000000000
     voz: 
     som: 
     music: 
@@ -1330,7 +1344,7 @@ MonoBehaviour:
     personagem1: {fileID: 1452396344}
     personagem2: {fileID: 461188005}
     cena: 1
-    humor: 
+    humor: 0000000000000000
     voz: 
     som: 
     music: 

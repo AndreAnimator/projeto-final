@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     //FIRST IN F<string>IRST OUT LISTA
     private Queue<string> sentences;
     private Queue<string> names;
+    private Queue<int> humores;
     //comparativos
     private string nomePrevio;
     private string nomeInicial;
@@ -29,12 +30,20 @@ public class DialogueManager : MonoBehaviour
     private string musicaInicial = "Theme";
     private string musicaUm = "Sapo";
     private int cenaAtual;
+    //comparativos de musica (int)
+    private int musicaIni;
+    private int musicaAtual;
+    private int musicaPrevia;
+    //comparativos de humor
+    private int humorInicial;
+    private int humorPrevio;
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
         names = new Queue<string>();
+        humores = new Queue<int>();
     }
 
     void Update()
@@ -69,6 +78,8 @@ public class DialogueManager : MonoBehaviour
             optionChoice.SetInteger("option", escolha);
         }
         if(!isDialoguing && isChoosing && Input.GetKeyDown(KeyCode.Space)){
+            personagem1.SetBool("isMudarHumor", false);
+            personagem2.SetBool("isMudarHumor", false);
             if(escolha == 1){
                 StartDialogue(dialogo.dialogue1.GetComponent<DIalogueTrigger>().dialogue);
                 isChoosing = false;
@@ -81,6 +92,7 @@ public class DialogueManager : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Theme");
             Debug.Log(escolha);
             optionChoice.SetBool("isShow", false);
+            escolha = 1;
         }
     }
 
@@ -103,6 +115,7 @@ public class DialogueManager : MonoBehaviour
 
         names.Clear();
         sentences.Clear();
+        humores.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -112,6 +125,12 @@ public class DialogueManager : MonoBehaviour
         {
             names.Enqueue(name);
         }
+        foreach(int humor in dialogue.humor)
+        {
+            humores.Enqueue(humor);
+        }
+        humorInicial = dialogue.humor[0];
+        humorPrevio = -1;
         nomePrevio = dialogue.name[0];
         nomeInicial = dialogue.name[0];
         numEscolha = dialogue.numEscolhas;
@@ -125,8 +144,9 @@ public class DialogueManager : MonoBehaviour
         if(sentences.Count == 1 && numEscolhas > 0)//mudei aqui
         {
             string name = names.Dequeue();
+            int humars = humores.Dequeue();
             nameText.text = name;
-            DisplayCharacter(name);
+            DisplayCharacter(name, humars);
             string sentencia = sentences.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentencia));
@@ -143,8 +163,9 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string nome = names.Dequeue();
+        int humors = humores.Dequeue();
         nameText.text = nome;
-        DisplayCharacter(nome);
+        DisplayCharacter(nome, humors);
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -153,7 +174,14 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void DisplayCharacter(string nome){
+    public void DisplayCharacter(string nome, int humors){
+        if(humors != humorPrevio){
+            personagem1.SetInteger("humor", humors);
+            personagem2.SetInteger("humor", humors);
+            personagem1.SetBool("isMudarHumor", true);
+            personagem2.SetBool("isMudarHumor", true);
+            humorPrevio = humors;
+        }
         if(nome != nomePrevio  && nome != nomeInicial){
             nomePrevio = nome;
             personagem1.SetBool("isShowing", false);
