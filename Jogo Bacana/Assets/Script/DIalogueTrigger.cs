@@ -5,8 +5,8 @@ using UnityEngine;
 public class DIalogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    public Dialogue dialogue1;
-    public Dialogue dialogue2;
+    private Dialogue dialogue1;//mudei pra private, n sei se faz diferença
+    private Dialogue dialogue2;
 
     void Start(){
         dialogue1 = dialogue.dialogue1.GetComponent<DIalogueTrigger>().dialogue;

@@ -38,4 +38,13 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Pause();
     }
+
+    public void SetPitch(string name, int pitchValue){
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null){
+            Debug.Log("nao achou");
+            return;
+        }
+        s.source.pitch = pitchValue;
+    }
 }

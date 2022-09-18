@@ -520,18 +520,20 @@ MonoBehaviour:
     personagem1: {fileID: 461188005}
     personagem2: {fileID: 1452396344}
     cena: 2
-    humor: 000000000100000000000000
+    humor: 00000000010000000200000000000000
     voz: 
-    som: 
+    som: 00000000000000000100000000000000
     music: 
     numEscolhas: 0
     name:
     - Sapo
     - Sapo
+    - Sapo
     - Fox
     sentences:
     - "Abacaxi, \xE9?"
-    - Eu gosto de abacaxi! HAHAHA
+    - Eu gosto de abacaxi!
+    - HAHAHAHA
     - Cringe.
   dialogue1:
     dialogue1: {fileID: 0}
@@ -541,7 +543,7 @@ MonoBehaviour:
     cena: 0
     humor: 
     voz: 
-    som: 
+    som: 00000000000000000000000000000000
     music: 
     numEscolhas: 0
     name: []
@@ -691,7 +693,7 @@ MonoBehaviour:
     cena: 0
     humor: 00000000020000000000000000000000
     voz: 
-    som: 
+    som: 02000000000000000000000000000000
     music: 
     numEscolhas: 2
     name:
@@ -1346,7 +1348,7 @@ MonoBehaviour:
     cena: 1
     humor: 0000000000000000
     voz: 
-    som: 
+    som: 00000000000000000000000000000000
     music: 
     numEscolhas: 0
     name:
@@ -1363,7 +1365,7 @@ MonoBehaviour:
     cena: 0
     humor: 
     voz: 
-    som: 
+    som: 00000000000000000000000000000000
     music: 
     numEscolhas: 0
     name: []
@@ -1656,13 +1658,13 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 7e72ea83df3c59746b0f7651e980ee8c, type: 3}
-    volume: 1
+    volume: 0.499
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Sapo
     clip: {fileID: 8300000, guid: 09d8f324b0e32df48a31920661bf26f1, type: 3}
-    volume: 1
+    volume: 0.499
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -1674,6 +1676,30 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Baixo
     clip: {fileID: 8300000, guid: 33f94b9359aa00b43bd6451b1406156c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Frog1
+    clip: {fileID: 8300000, guid: f2d279d04f2ddf94d82f87ae81bcadfa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Frog2
+    clip: {fileID: 8300000, guid: 6c5709daf322fc7418467dbb37e39a7c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Laugh
+    clip: {fileID: 8300000, guid: 8381583339c089644ba62b86e3bf5b4b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LaughInverso
+    clip: {fileID: 8300000, guid: 80e75d34a7950b44483fa6eeaeb4ba03, type: 3}
     volume: 1
     pitch: 1
     loop: 0

@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     public Animator optionChoice;//calmala
     private bool isDialoguing = false;
     private bool isChoosing = false;
+    private bool isNotChoosing = false;
     private int escolha = 1;
     private int numEscolha;
     //testando um negocio
@@ -23,9 +24,11 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private Queue<string> names;
     private Queue<int> humores;
+    private Queue<int> sounds;
     //comparativos
     private string nomePrevio;
     private string nomeInicial;
+    private string nomeAtual;
     //osnomedasmusica
     private string musicaInicial = "Theme";
     private string musicaUm = "Sapo";
@@ -44,6 +47,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         names = new Queue<string>();
         humores = new Queue<int>();
+        sounds = new Queue<int>();
     }
 
     void Update()
@@ -116,6 +120,7 @@ public class DialogueManager : MonoBehaviour
         names.Clear();
         sentences.Clear();
         humores.Clear();
+        sounds.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -129,10 +134,15 @@ public class DialogueManager : MonoBehaviour
         {
             humores.Enqueue(humor);
         }
+        foreach(int sound in dialogue.som)
+        {
+            sounds.Enqueue(sound);
+        }
         humorInicial = dialogue.humor[0];
         humorPrevio = -1;
         nomePrevio = dialogue.name[0];
         nomeInicial = dialogue.name[0];
+        nomeAtual = nomeInicial;
         numEscolha = dialogue.numEscolhas;
         DisplayNextSentence(FindObjectOfType<DIalogueTrigger>().dialogue, numEscolha);//mudei aqui
     }
@@ -143,17 +153,21 @@ public class DialogueManager : MonoBehaviour
         Debug.Log(numEscolhas);
         if(sentences.Count == 1 && numEscolhas > 0)//mudei aqui
         {
+            isNotChoosing = true;
             string name = names.Dequeue();
+            nomeAtual = name;
             int humars = humores.Dequeue();
             nameText.text = name;
+            int soms = sounds.Dequeue();
+            TocarSom(soms);
             DisplayCharacter(name, humars);
             string sentencia = sentences.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentencia));
             isChoosing = true;
+            isDialoguing = false;
             optionChoice.SetBool("isShow", true);
             optionChoice.SetInteger("option", 1);
-            isDialoguing = false;
         }
         else if(sentences.Count == 0 && !isChoosing){
             if(cenaAtual == 2){
@@ -163,7 +177,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string nome = names.Dequeue();
+        nomeAtual = nome;
         int humors = humores.Dequeue();
+        int sons = sounds.Dequeue();
+        TocarSom(sons);
         nameText.text = nome;
         DisplayCharacter(nome, humors);
         string sentence = sentences.Dequeue();
@@ -196,11 +213,45 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    void Speak(){
+        int som;
+        if(nomeAtual == "Sapo"){
+            Debug.Log("Frog: " + nomeAtual);
+            som = Random.Range(0, 3);
+            switch(som){
+                case 1:
+                    Debug.Log("TOCA");
+                    FindObjectOfType<AudioManager>().Play("Frog1");
+                    break;
+                case 2:
+                    FindObjectOfType<AudioManager>().Play("Frog2");
+                    break;
+                default:
+                    FindObjectOfType<AudioManager>().Play("Frog1");
+                    break;
+            }
+        }
+    }
+
+    void TocarSom(int num){
+        switch(num){
+            case 1:
+                FindObjectOfType<AudioManager>().Play("Laugh");
+                break;
+            case 2:
+                FindObjectOfType<AudioManager>().Play("LaughInverso");
+                break;
+            default:
+                return;
+        }
+    }
+
     IEnumerator TypeSentence(string sentence){
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
-            yield return null;
+            Speak();
+            yield return new WaitForSeconds(0.05f);
         }
     }
 
