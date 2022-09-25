@@ -535,32 +535,6 @@ MonoBehaviour:
     - Eu gosto de abacaxi!
     - HAHAHAHA
     - Cringe.
-  dialogue1:
-    dialogue1: {fileID: 0}
-    dialogue2: {fileID: 0}
-    personagem1: {fileID: 0}
-    personagem2: {fileID: 0}
-    cena: 0
-    humor: 
-    voz: 
-    som: 00000000000000000000000000000000
-    music: 
-    numEscolhas: 0
-    name: []
-    sentences: []
-  dialogue2:
-    dialogue1: {fileID: 0}
-    dialogue2: {fileID: 0}
-    personagem1: {fileID: 0}
-    personagem2: {fileID: 0}
-    cena: 0
-    humor: 
-    voz: 
-    som: 
-    music: 
-    numEscolhas: 0
-    name: []
-    sentences: []
 --- !u!114 &461188003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,32 +680,6 @@ MonoBehaviour:
     - Ribbit
     - Aur
     - "Eu sou um sapo. Do que voc\xEA gosta?\n1. Abacaxi\n2. Coco"
-  dialogue1:
-    dialogue1: {fileID: 0}
-    dialogue2: {fileID: 0}
-    personagem1: {fileID: 0}
-    personagem2: {fileID: 0}
-    cena: 0
-    humor: 
-    voz: 
-    som: 
-    music: 
-    numEscolhas: 0
-    name: []
-    sentences: []
-  dialogue2:
-    dialogue1: {fileID: 0}
-    dialogue2: {fileID: 0}
-    personagem1: {fileID: 0}
-    personagem2: {fileID: 0}
-    cena: 0
-    humor: 
-    voz: 
-    som: 
-    music: 
-    numEscolhas: 0
-    name: []
-    sentences: []
 --- !u!114 &509321772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1247,7 @@ GameObject:
   - component: {fileID: 1452396340}
   - component: {fileID: 1452396343}
   - component: {fileID: 1452396342}
+  - component: {fileID: 1452396345}
   - component: {fileID: 1452396341}
   - component: {fileID: 1452396344}
   m_Layer: 5
@@ -1357,32 +1306,6 @@ MonoBehaviour:
     sentences:
     - "Voc\xEA gosta de coco?"
     - "Eu acho que voc\xEA gosta \xE9 de coc\xF4, isso sim"
-  dialogue1:
-    dialogue1: {fileID: 0}
-    dialogue2: {fileID: 0}
-    personagem1: {fileID: 0}
-    personagem2: {fileID: 0}
-    cena: 0
-    humor: 
-    voz: 
-    som: 00000000000000000000000000000000
-    music: 
-    numEscolhas: 0
-    name: []
-    sentences: []
-  dialogue2:
-    dialogue1: {fileID: 0}
-    dialogue2: {fileID: 0}
-    personagem1: {fileID: 0}
-    personagem2: {fileID: 0}
-    cena: 0
-    humor: 
-    voz: 
-    som: 
-    music: 
-    numEscolhas: 0
-    name: []
-    sentences: []
 --- !u!114 &1452396342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1441,6 +1364,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1452396345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452396339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3732931aa565a464499ba22f6ca4247e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1452396344}
 --- !u!1 &1511040990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,8 +1544,7 @@ MonoBehaviour:
   nameText: {fileID: 297564690}
   dialogueText: {fileID: 1511040992}
   animator: {fileID: 1127355600}
-  personagem1: {fileID: 0}
-  personagem2: {fileID: 0}
+  personagem: {fileID: 0}
   optionChoice: {fileID: 914375168}
 --- !u!4 &1612564293
 Transform:
